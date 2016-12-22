@@ -2,10 +2,7 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+  - Swift
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -19,11 +16,11 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Tacos Kingdom API ! You can use our API to access the API endpoints, which can get information on various restaurants in our database.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in Swift ! You can view code examples in the dark area to the right.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+This example API documentation page was created with [Slate](https://github.com/tripit/slate) by [Anthony Roani](http://www.anthonyroani.com). 
 
 # Authentication
 
@@ -65,11 +62,11 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Restaurants
 
-## Get All Kittens
+## Get All Restaurants
 
-```ruby
+```Swift
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
@@ -116,11 +113,11 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all restaurants.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://tacoskingdom.herokuapp.com/restaurants/`
 
 ### Query Parameters
 
@@ -133,7 +130,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Restaurant
 
 ```ruby
 require 'kittn'
@@ -173,17 +170,33 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific restaurant.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://tacoskingdom.herokuapp.com/restaurants/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the restaurant to retrieve
+
+## Create a new Restaurant
+
+This endpoint create a restaurant.
+Required : POST a json  
+
+### HTTP Request
+
+`POST https://tacoskingdom.herokuapp.com/restaurants/`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the restaurant to retrieve
+
 
